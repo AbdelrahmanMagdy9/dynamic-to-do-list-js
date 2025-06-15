@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a new li element
         const listItem = document.createElement('li');
         
-        // Add the task text as a text node
-        listItem.appendChild(document.createTextNode(taskText));
+        // Create a span for the task text and append it
+        const taskTextSpan = document.createElement('span');
+        taskTextSpan.textContent = taskText;
+        listItem.appendChild(taskTextSpan);
 
         // Create a new button element for removing the task
         const removeButton = document.createElement('button');
