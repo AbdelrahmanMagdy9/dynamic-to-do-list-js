@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         removeBtn.className = 'remove-btn';
         
         // Add click event to remove button
-        removeBtn.onclick = () => {
-            li.remove();
+        removeBtn.onclick = function() {
+            taskList.removeChild(li);
         };
 
         // Add remove button to list item
@@ -42,9 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear input field
         taskInput.value = '';
-        
-        // Focus back on input field
-        taskInput.focus();
     }
 
     // Add click event listener to the add button
