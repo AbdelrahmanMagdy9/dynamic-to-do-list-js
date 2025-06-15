@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Task Creation and Removal
         // Create a new li element
         const listItem = document.createElement('li');
-        listItem.textContent = taskText;
+        
+        // Add the task text as a text node
+        listItem.appendChild(document.createTextNode(taskText));
 
         // Create a new button element for removing the task
         const removeButton = document.createElement('button');
